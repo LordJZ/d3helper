@@ -34,9 +34,8 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="D3Advanced .NET, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Desktop\d3advanced-experimental-11062012RC5\Assemblies\D3Advanced .NET.dll</HintPath>
+    <Reference Include="D3Advanced .NET">
+      <HintPath>..\..\..\..\Users\TOM_RUS\Desktop\d3advanced-experimental-11062012RC5\Assemblies\D3Advanced .NET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

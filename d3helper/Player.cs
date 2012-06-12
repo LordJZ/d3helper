@@ -6,7 +6,7 @@ namespace d3helper
     {
         //Represents the lowest percentage of health a bot can have before attempting to heal,
         //for example, if MIN_HEALTH = 0.6f, the bot will attempt to heal at 60% HP or lower.
-        public readonly float MIN_HEALTH = 0.6f;
+        protected const float MIN_HEALTH = 0.6f;
 
         protected SNOPowerId[] Skills;
 

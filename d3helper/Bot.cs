@@ -15,9 +15,10 @@ namespace d3helper
         private const ulong RepairAllButton = 0x80F5D06A035848A5;
         private const ulong DurabilityIndicator = 0xBD8B3C3679D4F4D9;
 
+        // We need to get rid of this somehow...
         protected static int NextTick = Environment.TickCount;
-        protected Player Class;
-        protected SnagIt SnagIt = new SnagIt();
+
+        protected Player Player;
 
         public abstract void Start();
         public abstract void Stop();
@@ -55,12 +56,12 @@ namespace d3helper
         protected bool Attack(SNOActorId actorId)
         {
             SetTimer(100);
-            return Class.Attack(actorId);
+            return Player.Attack(actorId);
         }
 
-        public void SetClass(Player _class)
+        public void SetPlayer(Player _player)
         {
-            Class = _class;
+            Player = _player;
         }
 
         protected bool ExitGame()

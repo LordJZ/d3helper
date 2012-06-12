@@ -8,29 +8,29 @@ namespace d3helper
     {
         //Represents the lowest MF value an item can have before being sold,
         //for example, if MIN_MAGIC_FIND = 0.12f, that means if the item in inventory does not have at least 12%, it will be sold.
-        protected float MIN_MAGIC_FIND = 0.15f;
+        private const float MIN_MAGIC_FIND = 0.15f;
 
         //Represents the lowest GF value an item can have before being sold,
         //for example, if MIN_GOLD_FIND = 0.12f, that means if the item in inventory does not have at least 12%, it will be sold.
-        protected float MIN_GOLD_FIND = 0.15f;
+        private const float MIN_GOLD_FIND = 0.15f;
 
         //Represents the lowest hp per hit value an item can have before being sold,
         //for example, if MIN_HP_PER_HIT is 700, that means if the item in inventory does not have at least 700 hit per hit, it will be sold.
-        protected float MIN_HP_PER_HIT = 600.0f;
+        private const float MIN_HP_PER_HIT = 600.0f;
 
         //Represents the lowest number of sockets an item can have before being sold,
         //for example, if MIN_NUMBER_OF_SOCKETS = 2, that means if the item in inventory does not have at least 2 sockets, it will be sold.
-        protected float MIN_NUMBER_OF_SOCKETS = 1.0f;
+        private const float MIN_NUMBER_OF_SOCKETS = 1.0f;
 
         //Represents the lowest resistance to all value an item can have before being sold,
         //for example, if MIN_RES_TO_ALL = 50, that means if the item in inventory does not have at least 50 Res to all, it will be sold.
-        protected float MIN_RES_TO_ALL = 50.0f;
+        private const float MIN_RES_TO_ALL = 50.0f;
 
         //Represents the lowest DPS value an item can have before being sold,
         //for example, if MIN_DPS = 500.0f, that means if the item in inventory does not have at least 500 DPS, it will be sold.
-        protected float MIN_DPS = 800.0f;
+        private const float MIN_DPS = 800.0f;
 
-        public bool SnagItems()
+        public static bool SnagItems()
         {
             if (Bot.Debug)
                 Bot.Print("SnagItems");
@@ -50,7 +50,7 @@ namespace d3helper
             return false;
         }
 
-        protected bool CheckItem(Unit unit)
+        protected static bool CheckItem(Unit unit)
         {
             if (unit.Type != UnitType.Item)
                 return false;
@@ -79,7 +79,7 @@ namespace d3helper
         }
 
         // this code causing disconnects sometimes (selling too fast?)
-        public bool SellItems()
+        public static bool SellItems()
         {
             foreach (Unit item in Unit.Get().Where(u => u.ItemContainer == Container.Inventory))
             {

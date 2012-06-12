@@ -21,7 +21,7 @@ namespace d3helper
             Stats.Start();
 
             Bot = new MiraEamonBot();
-            Bot.SetClass(new DemonHunter());
+            Bot.SetPlayer(new DemonHunter());
             Bot.Start();
         }
 

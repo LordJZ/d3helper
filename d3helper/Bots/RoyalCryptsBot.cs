@@ -82,14 +82,6 @@ namespace d3helper.Bots
 
         private bool Started = false;
 
-        // Stone Coffin
-        // Sarcophagus
-        // Loose Stone
-        // Dead Villager
-        // Activated Pillar
-        // Skeleton
-        // Skeletal Archer
-
         public RoyalCryptsBot()
         {
             Game.OnTickEvent += OnTick;

@@ -66,14 +66,14 @@ namespace d3helper.Bots
             Steps.Add(() => Me.PrimaryResource == Me.MaxPrimaryResource ? true : Class.UseSkill(4, 40, 143, Me.Z) && false); // Generate resource
             Steps.Add(() => Unit.Get().Any(a => a.ActorId == MiraEamon));
             Steps.Add(() => !Attack(MiraEamon));
-            Steps.Add(() => SnagItems());
+            Steps.Add(() => SnagIt.SnagItems());
 
             // Haedrig Eamon
             Steps.Add(() => MoveTo(HaedrigEamon));
             Steps.Add(() => Interact(HaedrigEamon));
             Steps.Add(() => CloseConversation());
 
-            Steps.Add(() => SnagItems());
+            Steps.Add(() => SnagIt.SnagItems());
             Steps.Add(() => GoToTown());
             Steps.Add(() =>
             {
@@ -93,7 +93,7 @@ namespace d3helper.Bots
             });
             Steps.Add(() => Interact(TashunTheMiner)); // Tashun the Miner
             Steps.Add(() => RepairAll());
-            Steps.Add(() => SellItems());
+            Steps.Add(() => SnagIt.SellItems());
             Steps.Add(() => ExitGame());
 
             Game.OnGameEnterEvent += OnGameEnter;

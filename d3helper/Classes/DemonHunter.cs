@@ -3,7 +3,7 @@ using D3;
 
 namespace d3helper.Classes
 {
-    class DemonHunter : ClassBase
+    class DemonHunter : Player
     {
         private SNOPowerId[] DHSkills =
         {
@@ -28,13 +28,13 @@ namespace d3helper.Classes
                 return false;
 
             // getting closest unit
-            var u = units.Where(x => x.Life > 0 && x.Mode != UnitMode.Dead).OrderBy(x => BotBase.GetDistance(x)).FirstOrDefault();
+            var u = units.Where(x => x.Life > 0 && x.Mode != UnitMode.Dead).OrderBy(x => Bot.GetDistance(x)).FirstOrDefault();
 
             if (u == null)
                 return false;
 
-            if (BotBase.Debug)
-                BotBase.Print("Attacking {0} ({1})", u.Name, u.ActorId);
+            if (Bot.Debug)
+                Bot.Print("Attacking {0} ({1})", u.Name, u.ActorId);
 
             //look at the current health of the bot, and decide whether it's necessary to use any support moves.
             if (Me.Life / Me.MaxLife < MIN_HEALTH)

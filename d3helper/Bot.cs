@@ -4,7 +4,7 @@ using D3;
 
 namespace d3helper
 {
-    abstract class BotBase
+    abstract class Bot
     {
         public const bool Debug = true;
 
@@ -15,17 +15,12 @@ namespace d3helper
         private const ulong RepairAllButton = 0x80F5D06A035848A5;
         private const ulong DurabilityIndicator = 0xBD8B3C3679D4F4D9;
 
-        protected int NextTick = Environment.TickCount;
-        protected ClassBase Class;
-        protected SnagIt SnagIt;
+        protected static int NextTick = Environment.TickCount;
+        protected Player Class;
+        protected SnagIt SnagIt = new SnagIt();
 
         public abstract void Start();
         public abstract void Stop();
-
-        public BotBase()
-        {
-            SnagIt = new SnagIt(this);
-        }
 
         protected virtual void OnTick(EventArgs e)
         {
@@ -63,7 +58,7 @@ namespace d3helper
             return Class.Attack(actorId);
         }
 
-        public void SetClass(ClassBase _class)
+        public void SetClass(Player _class)
         {
             Class = _class;
         }
@@ -122,7 +117,7 @@ namespace d3helper
             return false;
         }
 
-        public bool Interact(Unit unit)
+        public static bool Interact(Unit unit)
         {
             if (unit == null)
                 throw new ArgumentNullException("unit");
@@ -205,7 +200,7 @@ namespace d3helper
             Print(String.Format(format, args));
         }
 
-        protected void SetTimer(int delay)
+        protected static void SetTimer(int delay)
         {
             NextTick = Environment.TickCount + delay;
         }

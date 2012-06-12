@@ -19,7 +19,7 @@ namespace d3helper.Bots
         }
     }
 
-    class RoyalCryptsBot : BotBase
+    class RoyalCryptsBot : Bot
     {
         private long ticks;
 

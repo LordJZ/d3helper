@@ -30,27 +30,20 @@ namespace d3helper
         //for example, if MIN_DPS = 500.0f, that means if the item in inventory does not have at least 500 DPS, it will be sold.
         protected float MIN_DPS = 800.0f;
 
-        BotBase Bot;
-
-        public SnagIt(BotBase _bot)
-        {
-            Bot = _bot;
-        }
-
         public bool SnagItems()
         {
-            if (BotBase.Debug)
-                BotBase.Print("SnagItems");
+            if (Bot.Debug)
+                Bot.Print("SnagItems");
 
             Unit item = Unit.Get()
                 .Where(u => u.ItemContainer == Container.Unknown && CheckItem(u))
-                .OrderBy(u => BotBase.GetDistance(u)).FirstOrDefault();
+                .OrderBy(u => Bot.GetDistance(u)).FirstOrDefault();
 
             if (item == null)
                 return true;
 
-            if (BotBase.Debug)
-                BotBase.Print("Picking up: {0}", item.Name);
+            if (Bot.Debug)
+                Bot.Print("Picking up: {0}", item.Name);
 
             Bot.Interact(item);
 
@@ -64,8 +57,8 @@ namespace d3helper
 
             SNOActorId ActorId = unit.ActorId;
 
-            if (BotBase.Debug)
-                BotBase.Print("CheckItem: {0} - {1}", unit.Name, ActorId);
+            if (Bot.Debug)
+                Bot.Print("CheckItem: {0} - {1}", unit.Name, ActorId);
 
             // Edit to whatever you want to pickup.
             return unit.IsGemItem() // Gems

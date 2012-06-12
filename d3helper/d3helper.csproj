@@ -43,10 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BotBase.cs" />
+    <Compile Include="Bot.cs" />
     <Compile Include="Bots\MiraEamonBot.cs" />
     <Compile Include="Bots\RoyalCryptsBot.cs" />
-    <Compile Include="ClassBase.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Classes\Barbarian.cs" />
     <Compile Include="Classes\WitchDoctor.cs" />
     <Compile Include="Classes\Monk.cs" />

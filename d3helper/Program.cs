@@ -6,8 +6,8 @@ namespace d3helper
 {
     class Program
     {
-        static BotBase Bot;
-        static BotBase Stats;
+        static Bot Bot;
+        static Bot Stats;
 
         static void Main(string[] args)
         {

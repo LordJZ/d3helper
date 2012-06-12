@@ -3,7 +3,7 @@ using D3;
 
 namespace d3helper.Classes
 {
-    class Wizard : ClassBase
+    class Wizard : Player
     {
         private SNOPowerId[] WSkills =
         {
@@ -28,7 +28,7 @@ namespace d3helper.Classes
                 return false;
 
             // getting closest unit
-            var u = units.Where(x => x.Life > 0 && x.Mode != UnitMode.Dead).OrderBy(x => BotBase.GetDistance(x)).FirstOrDefault();
+            var u = units.Where(x => x.Life > 0 && x.Mode != UnitMode.Dead).OrderBy(x => Bot.GetDistance(x)).FirstOrDefault();
 
             if (u == null)
                 return false;

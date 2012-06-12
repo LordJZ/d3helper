@@ -5,7 +5,7 @@ using D3;
 
 namespace d3helper.Bots
 {
-    class MiraEamonBot : BotBase
+    class MiraEamonBot : Bot
     {
         // Max run time per game, milliseconds
         private const int MAXIMUM_RUN_TIME = 150000;

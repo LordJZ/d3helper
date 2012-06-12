@@ -3,7 +3,7 @@ using D3;
 
 namespace d3helper.Bots
 {
-    class StatsBot : BotBase
+    class StatsBot : Bot
     {
         // Represents whether or not the UI should be display, change this to false if you do not want to see it.
         private readonly bool DISPLAY_UI = true;

@@ -1,0 +1,3 @@
+*.suo
+d3helper/bin/*
+d3helper/obj/*

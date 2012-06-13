@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="D3Advanced .NET">
-      <HintPath>..\..\..\..\Users\TOM_RUS\Desktop\d3advanced-experimental-11062012RC5\Assemblies\D3Advanced .NET.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\d3advanced-experimental-11062012-RC5\Assemblies\D3Advanced .NET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

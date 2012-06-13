@@ -7,11 +7,11 @@ namespace d3helper.Classes
     {
         private SNOPowerId[] DHSkills =
         {
+            SNOPowerId.DemonHunter_Caltrops, // 4
             SNOPowerId.DemonHunter_SmokeScreen, // 1
             SNOPowerId.DemonHunter_Companion, // 2
             SNOPowerId.DemonHunter_Preparation, // 3
-            SNOPowerId.DemonHunter_Caltrops, // 4
-            SNOPowerId.DemonHunter_HungeringArrow, // left mouse
+            SNOPowerId.DemonHunter_EntanglingShot, // left mouse
             SNOPowerId.DemonHunter_ElementalArrow // right mouse
         };
 
@@ -39,13 +39,13 @@ namespace d3helper.Classes
             //look at the current health of the bot, and decide whether it's necessary to use any support moves.
             if (Me.Life / Me.MaxLife < MIN_HEALTH)
             {
-                if (!UseSkill(2))   // use preparation if ready
-                    UseSkill(0);    // if prep is not ready, use fog
+                if (!UseSkill(3))   // use preparation if ready
+                    UseSkill(1);    // if prep is not ready, use fog
             }
 
             //makes sure to use caltrops only when needed.
             if (Me.SecondaryResource == Me.MaxSecondaryResource)
-                UseSkill(3);
+                UseSkill(0);
 
             if (Me.PrimaryResource / Me.MaxPrimaryResource > 0.5f)
                 UseSkill(5, u);

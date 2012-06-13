@@ -37,12 +37,14 @@ namespace d3helper.Bots
             Steps.Add(() => StartGame());
             Steps.Add(() => Game.Ingame && Me.InTown);
 
+            Steps.Add(() => Player.UseSkill(2)); // Summon Companion (DH only)
+
             // Cain
             Steps.Add(() => MoveTo(Cain));
             Steps.Add(() => Interact(Cain));
             Steps.Add(() => CloseConversation());
 
-            Steps.Add(() => MoveTo(3003.098f, 2790.004f) && Player.UseSkill(1)); // Summon Companion (DH only)
+            Steps.Add(() => MoveTo(3003.098f, 2790.004f));
             Steps.Add(() => MoveTo(2993.186f, 2718.52f));
             Steps.Add(() => MoveTo(2954.805f, 2711.546f));
 
@@ -61,7 +63,7 @@ namespace d3helper.Bots
             Steps.Add(() => MoveTo(110f, 150.4982f));
             Steps.Add(() => Unit.Get().Count(a => a.ActorId == RavenousDead) >= 2);
             Steps.Add(() => !Attack(RavenousDead));
-            Steps.Add(() => MoveTo(65.0f, 145.0f) && Player.UseSkill(3)); // Place Caltrops (DH only)
+            Steps.Add(() => MoveTo(65.0f, 145.0f) && Player.UseSkill(0)); // Place Caltrops (DH only)
             Steps.Add(() => MoveTo(125.9097f, 145f));
             Steps.Add(() => Me.PrimaryResource == Me.MaxPrimaryResource ? true : Player.UseSkill(4, 40, 143, Me.Z) && false); // Generate resource
             Steps.Add(() => Unit.Get().Any(a => a.ActorId == MiraEamon));

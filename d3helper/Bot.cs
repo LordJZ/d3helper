@@ -81,7 +81,7 @@ namespace d3helper
             {
                 if (Debug)
                     Print("GoToTown");
-                SetTimer(7000);
+                SetTimer(1000);
                 Me.UsePower(SNOPowerId.UseStoneOfRecall);
             }
             return false;
@@ -125,7 +125,7 @@ namespace d3helper
 
             if (Debug)
                 Print("Interacting with {0} ({1})", unit.Name, unit.ActorId);
-            SetTimer(250);
+            SetTimer(100);
             return Me.UsePower(unit.Type == UnitType.Gizmo || unit.Type == UnitType.Item ? SNOPowerId.Axe_Operate_Gizmo : SNOPowerId.Axe_Operate_NPC, unit);
         }
 
@@ -136,7 +136,7 @@ namespace d3helper
             if (GetDistance(x, y) < 5.0f)
                 return true;
             Me.UsePower(SNOPowerId.Walk, x, y, Me.Z);
-            SetTimer(500);
+            SetTimer(100);
             return false;
         }
 

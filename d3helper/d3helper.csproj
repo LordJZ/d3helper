@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bot.cs" />
+    <Compile Include="Bots\DankCellarBot.cs" />
     <Compile Include="Bots\MiraEamonBot.cs" />
     <Compile Include="Bots\RoyalCryptsBot.cs" />
     <Compile Include="Player.cs" />

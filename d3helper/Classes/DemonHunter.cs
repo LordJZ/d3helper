@@ -7,9 +7,9 @@ namespace d3helper.Classes
     {
         private SNOPowerId[] DHSkills =
         {
-            SNOPowerId.DemonHunter_Caltrops, // 4
+            SNOPowerId.DemonHunter_Companion, // 0
             SNOPowerId.DemonHunter_SmokeScreen, // 1
-            SNOPowerId.DemonHunter_Companion, // 2
+            SNOPowerId.DemonHunter_Vault, // 2
             SNOPowerId.DemonHunter_Preparation, // 3
             SNOPowerId.DemonHunter_EntanglingShot, // left mouse
             SNOPowerId.DemonHunter_ElementalArrow // right mouse

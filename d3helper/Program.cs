@@ -20,7 +20,11 @@ namespace d3helper
             Stats = new StatsBot();
             Stats.Start();
 
-            Bot = new MiraEamonBot();
+            //Bot = new MiraEamonBot();
+            //Bot.SetPlayer(new DemonHunter());
+            //Bot.Start();
+
+            Bot = new DankCellarBot();
             Bot.SetPlayer(new DemonHunter());
             Bot.Start();
         }
